@@ -3,12 +3,12 @@
 Example of using MSAL in Outlook Native.  
 
 Run like this:
-  * Open manifest.xml and replace "someuser.ngrok.io" with your desirable host. - I use ngrok for Add-in development because of https.
-  * Create a file called `.env` with `CLIENTID=...` with Client ID of your AAD app.
+  * Open manifest.xml and replace "someuser.ngrok.io" with your desirable host. - I use ngrok for Add-in development because of https
+  * Create a file called `.env` with `CLIENTID=...` with Client ID of your AAD app
   * `npm i`
   * `npm start`
   * `ngrok http 1234 --username someuser.ngrok.io`
-  * Add custom Add-in by file or url (https://someuser.ngrok.io/manifest.xml).
+  * Add custom Add-in by file
   
   
 What makes this demo special:
