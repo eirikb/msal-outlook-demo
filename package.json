@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "dependencies": {
+    "core-js": "^3.4.1",
+    "msal": "^1.2.0",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "parcel": "^1.12.4"
+  },
+  "browserslist": [
+    "ie >= 11"
+  ]
+}
