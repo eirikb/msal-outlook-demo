@@ -5,7 +5,10 @@ import { UserAgentApplication } from 'msal';
 
 const clientId = process.env.CLIENTID;
 const scopes = ['User.Read'];
-const msal = new UserAgentApplication({ auth: { clientId } });
+const msal = new UserAgentApplication({
+  auth: { clientId },
+  cache: { cacheLocation: 'localStorage' }
+});
 
 const p = document.querySelector('p');
 const loginButton = document.querySelector('#login');
