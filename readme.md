@@ -1,6 +1,7 @@
 # MSAL Outlook Demo
 
 Example of using MSAL in Outlook Native.  
+See https://github.com/AzureAD/microsoft-authentication-library-for-js/issues/1072 .
 
 Run like this:
   * Open manifest.xml and replace "someuser.ngrok.io" with your desirable host. - I use ngrok for Add-in development because of https
@@ -12,5 +13,4 @@ Run like this:
   
   
 What makes this demo special:
-Overrides `openPopup` of MSAL with custom hack using [Outlook Office API Dialog](https://docs.microsoft.com/en-us/javascript/api/office/office.dialogoptions).  
-See https://github.com/AzureAD/microsoft-authentication-library-for-js/issues/1072 .
+Overrides [`openPopup` of MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/e3f4081/lib/msal-core/src/UserAgentApplication.ts#L738-L770) with [custom hack](https://github.com/eirikb/msal-outlook-demo/blob/2a034bc/app.js#L62-L77) using [Outlook Office API Dialog](https://docs.microsoft.com/en-us/javascript/api/office/office.dialogoptions).  
