@@ -77,6 +77,34 @@
               </OfficeTab>
             </ExtensionPoint>
           </DesktopFormFactor>
+
+          <MobileFormFactor>
+            <FunctionFile resid="residUILessFunctionFileUrl"/>
+            <ExtensionPoint xsi:type="MobileMessageReadCommandSurface">
+              <Group id="msgReadGroup">
+                <Label resid="label"/>
+                <Control xsi:type="MobileButton" id="msgReadOpenPaneButton">
+                  <Label resid="label"/>
+                  <Icon xsi:type="bt:MobileIconList">
+                    <bt:Image size="25" scale="1" resid="icon404"/>
+                    <bt:Image size="25" scale="2" resid="icon404"/>
+                    <bt:Image size="25" scale="3" resid="icon404"/>
+
+                    <bt:Image size="32" scale="1" resid="icon404"/>
+                    <bt:Image size="32" scale="2" resid="icon404"/>
+                    <bt:Image size="32" scale="3" resid="icon404"/>
+
+                    <bt:Image size="48" scale="1" resid="icon404"/>
+                    <bt:Image size="48" scale="2" resid="icon404"/>
+                    <bt:Image size="48" scale="3" resid="icon404"/>
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <SourceLocation resid="url"/>
+                  </Action>
+                </Control>
+              </Group>
+            </ExtensionPoint>
+          </MobileFormFactor>
         </Host>
       </Hosts>
 
