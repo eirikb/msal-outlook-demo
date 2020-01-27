@@ -1,10 +1,12 @@
 {
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "build": "parcel build --public-url . index.html",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "core-js": "^3.4.1",
-    "msal": "^1.2.0",
+    "core-js": "^3.6.4",
+    "msal": "^1.2.1",
     "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
