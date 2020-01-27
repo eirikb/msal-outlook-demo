@@ -3,6 +3,16 @@
 Example of using MSAL in Outlook Native.  
 See https://github.com/AzureAD/microsoft-authentication-library-for-js/issues/1072 .
 
+## Test 
+
+I've deployed this add-in to GitHub for testing purposes.  
+Add this manifest:
+
+https://eirikb.github.io/msal-outlook-demo/manifest.xml
+
+
+## Run locally
+
 Run like this:
   * Open manifest.xml and replace "someuser.ngrok.io" with your desirable host. - I use ngrok for Add-in development because of https
   * Create a file called `.env` with `CLIENTID=...` with Client ID of your AAD app
