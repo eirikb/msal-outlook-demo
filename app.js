@@ -23,7 +23,7 @@ function log(text) {
 }
 
 async function callApi() {
-  log('Call API');
+  log('Call Graph API (get /me)');
   try {
     const { accessToken } = await msal.acquireTokenSilent({ scopes });
     log(accessToken);
@@ -39,16 +39,16 @@ async function callApi() {
   }
 }
 
+log('Waiting for office...');
 Office.onReady(() => {
   if (msal.isCallback(window.location.hash)) {
     log('Window is callback (wait)');
     Office.context.ui.messageParent(window.location.hash);
   } else {
-    log('ready');
     if (msal.getAccount()) {
       callApi();
     } else if (msal.getLoginInProgress()) {
-      log('Logging in...',);
+      log('Logging in (login in progress)...',);
     } else {
       loginButton.disabled = false;
       log('Ready. Click button');
@@ -57,14 +57,13 @@ Office.onReady(() => {
 });
 
 loginButton.addEventListener('click', async () => {
-  log('login 1');
   msal.openPopup = () => {
     const dummy = {
       close() {
       },
       location: {
         assign(url) {
-          Office.context.ui.displayDialogAsync(url, { displayInIframe: true }, res => {
+          Office.context.ui.displayDialogAsync(url, { width: 25, height: 50 }, res => {
             dummy.close = res.value.close;
             res.value.addEventHandler(Office.EventType.DialogMessageReceived, ({ message }) =>
               dummy.location.href = dummy.location.hash = message
@@ -75,7 +74,8 @@ loginButton.addEventListener('click', async () => {
     };
     return dummy;
   };
+
+  log('Logging in...');
   await msal.loginPopup({ scopes });
-  log('login 2');
   callApi();
 });
