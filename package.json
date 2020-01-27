@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build --public-url . index.html",
+    "build": "parcel build --public-url . --no-source-maps index.html manifest.xml",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
@@ -10,6 +10,7 @@
     "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
+    "gh-pages": "^2.2.0",
     "parcel": "^1.12.4"
   },
   "browserslist": [
