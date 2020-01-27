@@ -14,11 +14,10 @@ https://eirikb.github.io/msal-outlook-demo/manifest.xml
 ## Run locally
 
 Run like this:
-  * Open manifest.xml and replace "someuser.ngrok.io" with your desirable host. - I use ngrok for Add-in development because of https
+  * Open manifest.xml and replace "eirikb.github.io" with your desirable host. 
   * Create a file called `.env` with `CLIENTID=...` with Client ID of your AAD app
   * `npm i`
   * `npm start`
-  * `ngrok http 1234 --username someuser.ngrok.io`
   * Add custom Add-in by file
   
   
