@@ -64,9 +64,9 @@
                       <Description resid="label"/>
                     </Supertip>
                     <Icon>
-                      <bt:Image size="16" resid="icon404"/>
-                      <bt:Image size="32" resid="icon404"/>
-                      <bt:Image size="80" resid="icon404"/>
+                      <bt:Image size="16" resid="icon"/>
+                      <bt:Image size="32" resid="icon"/>
+                      <bt:Image size="80" resid="icon"/>
                     </Icon>
                     <Action xsi:type="ShowTaskpane">
                       <SourceLocation resid="url"/>
@@ -86,17 +86,17 @@
                 <Control xsi:type="MobileButton" id="msgReadOpenPaneButton">
                   <Label resid="label"/>
                   <Icon xsi:type="bt:MobileIconList">
-                    <bt:Image size="25" scale="1" resid="icon404"/>
-                    <bt:Image size="25" scale="2" resid="icon404"/>
-                    <bt:Image size="25" scale="3" resid="icon404"/>
+                    <bt:Image size="25" scale="1" resid="icon"/>
+                    <bt:Image size="25" scale="2" resid="icon"/>
+                    <bt:Image size="25" scale="3" resid="icon"/>
 
-                    <bt:Image size="32" scale="1" resid="icon404"/>
-                    <bt:Image size="32" scale="2" resid="icon404"/>
-                    <bt:Image size="32" scale="3" resid="icon404"/>
+                    <bt:Image size="32" scale="1" resid="icon"/>
+                    <bt:Image size="32" scale="2" resid="icon"/>
+                    <bt:Image size="32" scale="3" resid="icon"/>
 
-                    <bt:Image size="48" scale="1" resid="icon404"/>
-                    <bt:Image size="48" scale="2" resid="icon404"/>
-                    <bt:Image size="48" scale="3" resid="icon404"/>
+                    <bt:Image size="48" scale="1" resid="icon"/>
+                    <bt:Image size="48" scale="2" resid="icon"/>
+                    <bt:Image size="48" scale="3" resid="icon"/>
                   </Icon>
                   <Action xsi:type="ShowTaskpane">
                     <SourceLocation resid="url"/>
@@ -110,7 +110,7 @@
 
       <Resources>
         <bt:Images>
-          <bt:Image id="icon404" DefaultValue="https://eirikb.github.io/msal-outlook-demo/icon404.png"/>
+          <bt:Image id="icon" DefaultValue="https://eirikb.github.io/msal-outlook-demo/icon.png"/>
         </bt:Images>
         <bt:Urls>
           <bt:Url id="url" DefaultValue="https://eirikb.github.io/msal-outlook-demo"/>
