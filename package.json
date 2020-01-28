@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build --public-url . --no-source-maps index.html manifest.xml",
+    "build": "parcel build --public-url . --no-source-maps index.html manifest.xml icon.png",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
