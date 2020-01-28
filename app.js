@@ -7,8 +7,11 @@ const clientId = process.env.CLIENTID;
 const scopes = ['User.Read'];
 
 const p = document.querySelector('p');
+const buttons = document.querySelector('#buttons');
 const loginButton = document.querySelector('#login');
 const clearCacheButton = document.querySelector('#clear-cache');
+const reloadButton = document.querySelector('#reload');
+const callApiButton = document.querySelector('#call-api');
 
 function log(text) {
   p.innerText = JSON.stringify(text);
@@ -29,7 +32,9 @@ function log(text) {
     return;
   }
 
-  // Only initialize msal if window is not callback.
+  buttons.hidden = false;
+
+  // Only initialize msal if window is not callback (not popup).
   // MSAL will pick up the hash and redirect - we don't want this.
   const msal = new UserAgentApplication({
     auth: { clientId },
@@ -66,7 +71,7 @@ function log(text) {
       log('Logging in (login in progress)...',);
     } else {
       loginButton.disabled = false;
-      log('Ready. Click button');
+      log('Ready. Click login button');
     }
   });
 
@@ -93,4 +98,7 @@ function log(text) {
     await msal.loginPopup({ scopes });
     callApi();
   });
+
+  reloadButton.addEventListener('click', () => window.location.reload());
+  callApiButton.addEventListener('click', callApi);
 })();
