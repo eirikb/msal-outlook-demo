@@ -20,6 +20,7 @@ function log(...parts) {
 }
 
 (() => {
+  // This part will be run inside the popup
   if (window.location.hash.includes('id_token=')) {
     log('Id token in hash (is callback)');
     Office.onReady(() => {
@@ -42,6 +43,11 @@ function log(...parts) {
     auth: { clientId },
     cache: { cacheLocation: 'localStorage' }
   });
+
+  // When hidden iframe for acquireTokenSilent
+  if (msal.isCallback(window.location.hash)) {
+    return;
+  }
 
   clearCacheButton.addEventListener('click', () => {
     msal.clearCache();
