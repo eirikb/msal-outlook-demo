@@ -56,7 +56,7 @@ log('Loading...');
   });
 
   async function callApi() {
-    log('Call Graph API (get /me)');
+    log('Calling Graph API (/me)...');
     try {
       const { accessToken } = await msal.acquireTokenSilent({ scopes });
       log('AccessToken:', accessToken);
@@ -65,7 +65,7 @@ log('Loading...');
           authorization: `Bearer ${accessToken}`
         }
       }).then(res => res.json());
-      log('SUCCESS! Graph API/me:', me);
+      log('SUCCESS! Graph API (/me):', me);
     } catch (e) {
       log(e);
       throw e;
