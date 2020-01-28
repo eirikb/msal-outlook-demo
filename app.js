@@ -19,6 +19,8 @@ function log(...parts) {
     .join(' ');
 }
 
+log('Loading...');
+
 (() => {
   // This part will be run inside the popup
   if (window.location.hash.includes('id_token=')) {
@@ -57,13 +59,13 @@ function log(...parts) {
     log('Call Graph API (get /me)');
     try {
       const { accessToken } = await msal.acquireTokenSilent({ scopes });
-      log(accessToken);
+      log('AccessToken:', accessToken);
       const me = await fetch('https://graph.microsoft.com/v1.0/me', {
         headers: {
           authorization: `Bearer ${accessToken}`
         }
       }).then(res => res.json());
-      log(me);
+      log('SUCCESS! Graph API/me:', me);
     } catch (e) {
       log(e);
       throw e;
