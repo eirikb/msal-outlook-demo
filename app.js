@@ -13,8 +13,10 @@ const clearCacheButton = document.querySelector('#clear-cache');
 const reloadButton = document.querySelector('#reload');
 const callApiButton = document.querySelector('#call-api');
 
-function log(text) {
-  p.innerText = JSON.stringify(text);
+function log(...parts) {
+  p.innerText = parts
+    .map(part => typeof part === 'string' ? part : JSON.stringify(part))
+    .join(' ');
 }
 
 (() => {
