@@ -7,10 +7,10 @@
     xsi:type="MailApp">
   <Id>40365d02-7156-421b-972a-3bd0a03d6d0c</Id>
   <Version>1.0.0.2</Version>
-  <ProviderName>Demo</ProviderName>
+  <ProviderName>MSAL Demo</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="Demo"/>
-  <Description DefaultValue="Demo"/>
+  <DisplayName DefaultValue="MSAL Demo"/>
+  <Description DefaultValue="MSAL Demo"/>
   <SupportUrl DefaultValue="https://eirikb.github.io/msal-outlook-demo"/>
   <AppDomains>
     <AppDomain>https://eirikb.github.io</AppDomain>
@@ -116,10 +116,10 @@
           <bt:Url id="url" DefaultValue="https://eirikb.github.io/msal-outlook-demo"/>
         </bt:Urls>
         <bt:ShortStrings>
-          <bt:String id="label" DefaultValue="Demo"/>
+          <bt:String id="label" DefaultValue="MSAL Demo"/>
         </bt:ShortStrings>
         <bt:LongStrings>
-          <bt:String id="label" DefaultValue="Demo"/>
+          <bt:String id="label" DefaultValue="MSAL Demo"/>
         </bt:LongStrings>
       </Resources>
     </VersionOverrides>
